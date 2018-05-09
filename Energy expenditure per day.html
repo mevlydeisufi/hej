@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+<head>  
+<script>
+window.onload = function () {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,
+	theme: "light2", // "light1", "light2", "dark1", "dark2"
+	title:{
+		text: "Energy expenditure per day"
+	},
+	axisY: {
+		title: "Number of burns"
+	},
+	data: [{        
+		type: "column",  
+		showInLegend: true, 
+		legendMarkerColor: "grey",
+		legendText: "user nr 1",
+		dataPoints: [      
+			{ y: 2501, label: "Monday" },
+			{ y: 2034,  label: "Tuesday" },
+			{ y: 2032,  label: "Wednesday" },
+			{ y: 2033,  label: "Thursday" },
+			{ y: 2045,  label: "Friday" },
+			{ y: 1073, label: "Saturday" },
+			{ y: 1421,  label: "Sunday" },
+		]
+	}]
+});
+chart.render();
+
+}
+</script>
+</head>
+<body>
+<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
+</html>

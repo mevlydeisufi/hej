@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+<head>  
+<script>
+window.onload = function () {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,
+	theme: "light2", // "light1", "light2", "dark1", "dark2"
+	title:{
+		text: "Walked distance per day"
+	},
+	axisY: {
+		title: "distance"
+	},
+	data: [{        
+		type: "column",  
+		showInLegend: true, 
+		legendMarkerColor: "grey",
+		legendText: "user nr 1",
+		dataPoints: [      
+			{ y: 6003, label: "Monday" },
+			{ y: 4532,  label: "Tuesday" },
+			{ y: 14532,  label: "Wednesday" },
+			{ y: 5422,  label: "Thursday" },
+			{ y: 7645,  label: "Friday" },
+			{ y: 10234, label: "Saturday" },
+			{ y: 11234,  label: "Sunday" },
+		]
+	}]
+});
+chart.render();
+
+}
+</script>
+</head>
+<body>
+<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
+</html>

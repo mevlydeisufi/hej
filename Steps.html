@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+<head>  
+<script>
+window.onload = function () {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,
+	theme: "light2", // "light1", "light2", "dark1", "dark2"
+	title:{
+		text: "Step per day"
+	},
+	axisY: {
+		title: "number of steps"
+	},
+	data: [{        
+		type: "column",  
+		showInLegend: true, 
+		legendMarkerColor: "grey",
+		legendText: "user nr 1",
+		dataPoints: [      
+			{ y: 220879, label: "Monday" },
+			{ y: 366455,  label: "Tuesday" },
+			{ y: 269709,  label: "Wednesday" },
+			{ y: 158400,  label: "Thursday" },
+			{ y: 142503,  label: "Friday" },
+			{ y: 221500, label: "Saturday" },
+			{ y: 333800,  label: "Sunday" },
+		]
+	}]
+});
+chart.render();
+
+}
+</script>
+</head>
+<body>
+<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
+</html>
